@@ -1,0 +1,249 @@
+{
+  "title": "Chương 5: Đồng bộ tiến trình",
+  "total_questions": 22,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Xung đột dữ liệu (data race) có thể xảy ra trong trường hợp nào sau đây?",
+      "options": {
+        "a": "Hai tiến trình cùng truy cập vào một bộ đệm I/O và thực hiện thao tác ghi dữ liệu",
+        "b": "Hai tiến trình cùng truy cập vào một vùng nhớ chia sẻ và thực hiện thao tác ghi dữ liệu",
+        "c": "Hai tiến trình cùng truy cập vào một tài nguyên mạng và thực hiện thao tác ghi dữ liệu",
+        "d": "Hai tiến trình cùng truy cập vào một tệp tin và chỉ thực hiện thao tác đọc dữ liệu"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Đặc điểm chung của nhóm giải pháp đồng bộ theo cơ chế chờ bận (busy waiting) là gì?",
+      "options": {
+        "a": "Tiến trình tiếp tục tiêu thụ CPU khi chưa được cấp quyền vào vùng tranh chấp",
+        "b": "Cần có sự can thiệp và hỗ trợ trực tiếp từ hệ điều hành",
+        "c": "Luôn bảo đảm tính chất loại trừ tương hỗ trên các hệ thống đa bộ xử lý",
+        "d": "Không bao giờ xảy ra hiện tượng đói tài nguyên (starvation)"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Thuật toán Peterson sử dụng bao nhiêu biến chia sẻ để đồng bộ?",
+      "options": {
+        "a": "Một",
+        "b": "Bốn",
+        "c": "Hai",
+        "d": "Ba"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 4,
+      "question": "Phát biểu nào sau đây phản ánh đúng bản chất kết quả của race condition?",
+      "options": {
+        "a": "Kết quả luôn luôn không thể dự đoán và bị sai lệch",
+        "b": "Kết quả luôn dẫn tới tình trạng deadlock",
+        "c": "Kết quả luôn cố định và dự đoán được chính xác",
+        "d": "Kết quả phụ thuộc vào thứ tự thực thi mà các tiến trình hoặc luồng được lập lịch"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "id": 5,
+      "question": "Lời giải hoàn chỉnh cho bài toán vùng tranh chấp cần thỏa mãn những tiêu chí nào trong các tiêu chí sau: (1) Loại trừ tương hỗ (Mutual Exclusion), (2) Tất cả tiến trình phải được đối xử như nhau, (3) Tiến triển (Progress), (4) Chờ đợi có giới hạn (Bounded Waiting)?",
+      "options": {
+        "a": "(1), (2), (3), (4)",
+        "b": "(1), (3), (4)",
+        "c": "(2), (3), (4)",
+        "d": "(1), (2), (4)"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Thuật toán Peterson được áp dụng chủ yếu để giải quyết vấn đề gì trong hệ điều hành?",
+      "options": {
+        "a": "Đảm bảo tính loại trừ tương hỗ (mutual exclusion)",
+        "b": "Triển khai không gian bộ nhớ ảo",
+        "c": "Hiện thực hóa cấu trúc dữ liệu semaphore",
+        "d": "Lập lịch thực thi tiến trình"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 7,
+      "question": "Trong giải pháp đồng bộ dùng semaphore, để cho phép tối đa 5 tiến trình đồng thời vào vùng tranh chấp, cần khởi tạo semaphore với giá trị bằng bao nhiêu?",
+      "options": {
+        "a": "6",
+        "b": "10",
+        "c": "5",
+        "d": "4"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 8,
+      "question": "Mục đích của biến 'turn' trong thuật toán đồng bộ Peterson là gì?",
+      "options": {
+        "a": "Làm bộ đếm số lần mỗi tiến trình đã bước vào critical section",
+        "b": "Thuật toán Peterson không sử dụng biến này",
+        "c": "Thông báo cho các tiến trình khác biết có thể vào critical section",
+        "d": "Chỉ ra tiến trình nào đang đến lượt được ưu tiên vào critical section"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "id": 9,
+      "question": "Tại sao việc kiểm soát và bảo vệ các vùng tranh chấp (critical section) trong hệ điều hành lại mang tính chất thiết yếu?",
+      "options": {
+        "a": "Để tránh mất mát dữ liệu trên ổ đĩa",
+        "b": "Để ngăn chặn tình trạng tranh đoạt dữ liệu (race condition)",
+        "c": "Để nâng cao tối đa hiệu suất xử lý của toàn hệ thống",
+        "d": "Để mở rộng số lượng tài khoản có quyền quản trị"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 10,
+      "question": "Nếu giá trị hiện thời của biến semaphore s1 là -5, phát biểu nào sau đây là chính xác?",
+      "options": {
+        "a": "Cần thực hiện thao tác signal(s1) đúng 5 lần thì mới có thể gọi tiếp thao tác wait(s1)",
+        "b": "Không tiến trình nào có thể gọi thao tác wait(s1) cho đến khi s1 lớn hơn 0",
+        "c": "Semaphore không được nhận giá trị âm nên trường hợp này không hợp lệ",
+        "d": "Đang có 5 tiến trình bị chặn và xếp hàng chờ trên semaphore s1"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "id": 11,
+      "question": "Giải pháp nào dưới đây thường được áp dụng để bảo vệ các vùng tranh chấp trong hệ điều hành?",
+      "options": {
+        "a": "Cho phép tất cả các luồng truy cập critical section cùng một lúc",
+        "b": "Giảm mức độ ưu tiên của các luồng cần truy cập critical section",
+        "c": "Sử dụng các cơ chế đồng bộ như semaphores và mutex",
+        "d": "Tăng số lượng luồng tối đa được cấp phép vào critical section"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 12,
+      "question": "Khái niệm Counting Semaphore được định nghĩa là gì?",
+      "options": {
+        "a": "Semaphore có giá trị giới hạn nhỏ nhất là 0",
+        "b": "Semaphore nhận giá trị là một số thực",
+        "c": "Semaphore có giá trị cực đại lớn hơn 1",
+        "d": "Semaphore chỉ nhận giá trị nhị phân 0 hoặc 1"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 13,
+      "question": "Giải pháp nào sau đây giúp loại trừ nguy cơ xảy ra race condition trong hệ điều hành?",
+      "options": {
+        "a": "Giảm bớt dung lượng bộ nhớ cấp phát cho mỗi tiến trình/luồng",
+        "b": "Tăng mức độ ưu tiên của các tiến trình cần truy cập tài nguyên chia sẻ",
+        "c": "Tăng số lượng tiến trình truy cập đồng thời vào tài nguyên",
+        "d": "Triển khai các cơ chế đồng bộ hóa phù hợp"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "id": 14,
+      "question": "Giải pháp đồng bộ tiến trình của Peterson là sự kết hợp giữa các thành phần nào?",
+      "options": {
+        "a": "Biến turn kiểm tra lượt và mảng order[] kiểm tra thứ tự",
+        "b": "Biến turn kiểm tra lượt và mảng flag[] kiểm tra tính sẵn sàng",
+        "c": "Biến semaphore kiểm tra số lần thực thi và mảng order[] kiểm tra thứ tự",
+        "d": "Biến flag kiểm tra lượt và mảng priority[] kiểm tra độ ưu tiên"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 15,
+      "question": "Đoạn mã nguồn mà tại đó tiến trình truy cập và cập nhật các biến hoặc tệp tin dùng chung được gọi là gì?",
+      "options": {
+        "a": "Critical section",
+        "b": "Race section",
+        "c": "Non-critical section",
+        "d": "Sensitive section"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 16,
+      "question": "Vấn đề tiềm ẩn khi sử dụng khóa mutex để đồng bộ hóa truy cập tài nguyên chia sẻ là gì?",
+      "options": {
+        "a": "Tình trạng deadlock có thể xảy ra nếu một tiến trình đang giữ một khóa và chờ một khóa khác vốn đang bị tiến trình khác giữ",
+        "b": "Một khóa mutex không thể được dùng để đồng bộ hóa truy cập vào tài nguyên được chia sẻ",
+        "c": "Cả deadlock và tình trạng đói đều không có khả năng xảy ra khi sử dụng khóa mutex",
+        "d": "Tình trạng đói có thể xảy ra nếu một tiến trình bị ngăn cản vô thời hạn khi muốn chiếm một khóa mutex"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "id": 17,
+      "question": "Cơ chế đồng bộ hóa đóng vai trò cốt lõi nào đối với bài toán vùng tranh chấp (critical section)?",
+      "options": {
+        "a": "Tối ưu hóa và nâng cao hiệu suất tính toán của hệ thống",
+        "b": "Đảm bảo sự phân phối công bằng tuyệt đối về tài nguyên giữa các luồng",
+        "c": "Ngăn chặn tình trạng deadlock xảy ra",
+        "d": "Đảm bảo nguyên tắc loại trừ tương hỗ (mutual exclusion)"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "id": 18,
+      "question": "Định nghĩa chính xác về vùng tranh chấp (critical section) trong hệ điều hành là gì?",
+      "options": {
+        "a": "Vùng mã nguồn được thực thi dùng chung giữa hai hay nhiều tiến trình",
+        "b": "Vùng nhớ lưu trữ dữ liệu được chia sẻ bởi hai hay nhiều tiến trình",
+        "c": "Vùng dữ liệu (data section) được cấp phát đồng thời cho các tiến trình",
+        "d": "Vùng code chứa các thao tác làm thay đổi dữ liệu chia sẻ giữa hai hay nhiều tiến trình"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "id": 19,
+      "question": "Khi các tiến trình cộng tác (cooperative processes) với nhau, yếu tố bắt buộc phải đảm bảo là gì?",
+      "options": {
+        "a": "Ngăn chặn hoàn toàn hiện tượng deadlock",
+        "b": "Bảo đảm tính nhất quán của dữ liệu (data consistency)",
+        "c": "Tránh tình trạng starvation",
+        "d": "Cân bằng tải giữa các lõi xử lý"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 20,
+      "question": "Phát biểu nào sau đây phản ánh chính xác quy tắc hoạt động của khóa mutex?",
+      "options": {
+        "a": "Khóa mutex chỉ có thể được sử dụng trong các ứng dụng đơn tiến trình",
+        "b": "Khóa mutex có thể được mở bởi một tiến trình bất kỳ không giữ khóa",
+        "c": "Khóa mutex chỉ có thể được giải phóng bởi chính tiến trình đã khóa nó",
+        "d": "Quyền sở hữu khóa mutex có thể được chia sẻ đồng thời giữa nhiều tiến trình"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 21,
+      "question": "Lợi ích nổi bật của việc sử dụng các thao tác đơn nguyên (atomic operations) trong hệ điều hành là gì?",
+      "options": {
+        "a": "Cải thiện hiệu năng xử lý nhờ hạn chế số lần chuyển đổi ngữ cảnh (context switch)",
+        "b": "Đảm bảo việc truy cập vào critical section luôn tuân theo một thứ tự định sẵn",
+        "c": "Cung cấp giải pháp đồng bộ truy cập tài nguyên chia sẻ mà không cần sử dụng khóa hoặc semaphore",
+        "d": "Triệt tiêu hoàn toàn nguy cơ xảy ra starvation trong hệ thống"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 22,
+      "question": "Xét một hệ thống có 4 tiến trình T1, T2, T3, T4. Quan hệ thứ tự thực thi giữa các tiến trình được biểu diễn theo sơ đồ: T1 -> T2, T1 -> T3, T2 -> T4, T3 -> T4 (tiến trình Tx phải hoàn thành trước khi Ty bắt đầu). Giả sử tất cả tiến trình đều đã sẵn sàng, để đồng bộ hoạt động theo đúng sơ đồ trên cần sử dụng ít nhất bao nhiêu semaphore?",
+      "url_demo": "assets/",
+      "options": {
+        "a": "4",
+        "b": "2",
+        "c": "1",
+        "d": "3"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "title": "Chương 7: Quản lý bộ nhớ",
+  "total_questions": 15,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Associative memory là thuật ngữ để chỉ:",
+      "options": {
+        "a": "Một vùng nhớ đặc biệt để liên kết địa chỉ luận lý và địa chỉ vật lý",
+        "b": "Một bảng trang rút gọn đặc biệt được lưu trong cache",
+        "c": "Một vùng nhớ đặc biệt có tác dụng lưu trữ bảng trang",
+        "d": "Một bảng trang đặc biệt có tác dụng ghi nhận những trang đã được truy xuất"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Chọn phát biểu SAI khi nói về Translation Look-Aside Buffer (TLB)?",
+      "options": {
+        "a": "Xác suất tìm thấy trang trong TLB là trên 90%",
+        "b": "Kích thước của TLB thường rất nhỏ",
+        "c": "TLB được lưu trên cache do đó có tốc độ truy xuất rất nhanh",
+        "d": "TLB giúp cho thao tác truy xuất lệnh/dữ liệu trở nên nhanh hơn"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Trong kỹ thuật paging, bộ nhớ vật lý được chia thành các khối, ý nào sau đây mô tả đúng về các khối này?",
+      "options": {
+        "a": "Kích thước mỗi khối là bằng nhau và cố định trong khoảng 512 bytes đến 16Mbytes",
+        "b": "Kích thước mỗi khối là cố định, và có thể khác nhau trong khoảng từ 512 bytes đến 16 Mbytes",
+        "c": "Kích thước mỗi khối có thể co giãn, dao động từ 512 bytes đến 16 Mbytes",
+        "d": "Kích thước mỗi khối là bằng nhau và cố định. Kích thước này lớn hay nhỏ tùy vào tổng độ lớn của bộ nhớ chính."
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Cho bảng trang như bên dưới:\n0 1\n1 5\n2 4\n3 8\n4 6\n5 2\n\nBiết kích thước mỗi khung trang là 4Kbytes, như vậy địa chỉ vật lý 18408 sẽ được ánh xạ thành địa chỉ ảo ...",
+      "options": null,
+      "correct_answer": "10216"
+    },
+    {
+      "id": 5,
+      "question": "Phần cứng thực hiện việc ánh xạ địa chỉ ảo thành địa chỉ vật lý được gọi là?",
+      "options": {
+        "a": "Memory Mapping Unit (MMU)",
+        "b": "Memory Management Unit (MMU)",
+        "c": "Input/Output Controller (IOC)",
+        "d": "Random Access Memory (RAM)"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Cho bảng trang như bên dưới:\n0 4\n1 8\n2 1\n3 2\n4 9\n5 3\n\nBiết kích thước mỗi trang là 2Kbytes, như vậy địa chỉ ảo 4567 sẽ được ánh xạ thành địa chỉ vật lý ...\n*Lưu ý: 1K = 1024",
+      "options": null,
+      "correct_answer": "2519",
+      "explanation": "Mẹo 3 bước siêu nhanh:\n1. 2K = 2048. Lấy 4567 / 2048 = 2,23 -> Lấy số nguyên là Trang 2. Phần dư: 4567 - (2 * 2048) = 471.\n2. Tra bảng: Cột trái số 2 ứng với cột phải là số 1 (Khung 1).\n3. Địa chỉ vật lý: 1 * 2048 + 471 = 2519."
+    },
+    {
+      "id": 7,
+      "question": "Chọn phát biểu đúng khi nói về việc quản lý bộ nhớ?",
+      "options": {
+        "a": "Tất cả đều đúng",
+        "b": "Chương trình ứng dụng chỉ làm việc với địa chỉ luận lý và không bao giờ nhìn thấy địa chỉ vật lý thực sự",
+        "c": "Việc liên kết địa chỉ sẽ được thực hiện trong giai đoạn thực thi nếu chương trình cần truy cập đến một vị trí nào đó trong bộ nhớ chính",
+        "d": "Địa chỉ bộ nhớ trong mã nguồn được biểu diễn dưới dạng ký hiệu (symbolic)"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 8,
+      "question": "Xét một hệ thống sử dụng kỹ thuật phân trang, với bảng trang được lưu trữ trong bộ nhớ chính. Nếu sử dụng TLBs với hit-ratio (tỉ lệ tìm thấy) là 80%, thời gian để tìm trong TLBs là 25 ns. Thời gian truy xuất bộ nhớ trong hệ thống (effective memory reference time) là 175ns. Vậy thời gian cho một lần truy xuất bộ nhớ là ... ns",
+      "options": null,
+      "correct_answer": "125"
+    },
+    {
+      "id": 9,
+      "question": "Xét một hệ thống sử dụng kỹ thuật phân trang, với bảng trang được lưu trữ trong bộ nhớ chính. Nếu sử dụng TLBs với hit-ratio (tỉ lệ tìm thấy) là 96%, thời gian để tìm trong TLBs là 16 ns. Thời gian truy xuất hiệu dụng (effective memory reference time) là 204ns. Tính thời gian cho một lần truy xuất lệnh/dữ liệu là bao nhiêu ns?",
+      "options": {
+        "a": "Xấp xỉ 350.6",
+        "b": "Xấp xỉ 180.8",
+        "c": "Xấp xỉ 361.5",
+        "d": "Xấp xỉ 90.4"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 10,
+      "question": "Chọn phát biểu đúng khi nói về hiện tượng phân mảnh nội?",
+      "options": {
+        "a": "Tất cả đều sai",
+        "b": "Chênh lệch kích thước giữa vùng nhớ được cấp phát và yêu cầu cấp phát",
+        "c": "Bộ nhớ cấp phát lớn hơn một ít so với yêu cầu cấp phát bộ nhớ",
+        "d": "Tổng dung lượng còn lại trong không gian bộ nhớ đủ để thỏa mãn yêu cầu cấp phát nhưng lại không liên tục"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 11,
+      "question": "Biết thời gian truy xuất lệnh/dữ liệu không sử dụng TLBs là 200ns. Thời gian tìm kiếm trong bảng TLBs là 20ns. Với xác suất tìm thấy trong TLBs bằng ... % thì thời gian truy xuất hiệu dụng sẽ là 121ns?",
+      "options": null,
+      "correct_answer": "99"
+    },
+    {
+      "id": 12,
+      "question": "Xét một không gian địa chỉ luận lý có 18 trang, mỗi trang có kích thước là 4K. Như vậy ta cần ... bit để biểu diễn cho một địa chỉ luận lý trong không gian này.",
+      "options": null,
+      "correct_answer": "17"
+    },
+    {
+      "id": 13,
+      "question": "Gọi base_register và limit_register là 2 thanh ghi lưu địa chỉ nền và giới hạn địa chỉ của một tiến trình. Với base_register = 10000 và limit_register = 500, CÁC địa chỉ ảo nào sau đây là hợp lệ?",
+      "options": {
+        "a": "467",
+        "b": "231",
+        "c": "605",
+        "d": "10289"
+      },
+      "correct_answer": "a, b"
+    },
+    {
+      "id": 14,
+      "question": "Trong kỹ thuật phân trang, mục đích của việc thiết lập bảng trang là gì?",
+      "options": {
+        "a": "Tránh hiện tượng phân mảnh ngoại",
+        "b": "Tránh hiện tượng phân mảnh nội",
+        "c": "Phân bổ bộ nhớ vật lý mỗi khi có sẵn",
+        "d": "Chuyển địa chỉ luận lý thành địa chỉ vật lý"
+      },
+      "correct_answer": "d"
+    },
+    {
+      "id": 15,
+      "question": "\"Nếu vị trí bộ nhớ được biết trước thì (mã tuyệt đối) absolute code có thể được tạo\" là mô tả nói về việc gán địa chỉ của các lệnh và dữ liệu vào giai đoạn nào?",
+      "options": {
+        "a": "Load time",
+        "b": "Execution time",
+        "c": "Compile time"
+      },
+      "correct_answer": "c"
+    }
+  ]
+}
